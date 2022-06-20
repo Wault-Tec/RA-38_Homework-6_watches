@@ -1,17 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
 #root {
   height: 100vh;
 
   display: flex;
 }
 
-.AppForm {
+.appWrapper {
   width: 500px;
+  display: flex;
+  flex-direction: column;
+  margin:auto;
+  font-family: 'Comfortaa', cursive;
+}
 
+.watchItems {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.watchItem {
+  box-sizing: border-box;
+  display: flex;
+  position: relative;
+  margin-top: 15px;
+  margin-right: 15px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-image: url(./img/vector-earth-globe-vector-eps.jpg);
+  background-size: cover;
+}
+
+.watchItem__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+  margin: auto;
+  font-family: 'Comfortaa', cursive;
+  font-size: 15px;
+}
+
+.watchTime {
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  padding: 3px;
+  width: 65px;
+  background-color: rgb(255, 255, 255, 0.7);
+  font-size: 14px;
+}
+
+.watchName {
+  max-width: 130px;
+  margin-bottom: 5px;
+  word-wrap: break-word;
+  background-color: rgb(255, 255, 255, 0.9);
+  padding: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+  font-weight: 600;
+}
+
+.watchBtn {
+  position: absolute;
+  background-color: rgba(0, 0, 0,0);
+  border: none;
+  right: 0;
+}
+
+.watchBtn:hover {
+  cursor: pointer;
+}
+
+.AppForm {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-
-  margin:auto;
 }
 
 .InputWrapper {
@@ -19,10 +84,9 @@
   flex-direction: column;
 }
 
-
 input {
   height: 30px;
-
+  width: 180px;
   box-sizing: border-box;
 
 }
@@ -34,13 +98,14 @@ input {
 
 .formButton {
   box-sizing: border-box;
-
   height: 30px;
   width: 100px;
 
   background-color: #ffffff;
 
   border-width: 1px;
+
+  font-family: inherit;
 }
 
 .formButton:hover {
